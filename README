@@ -1,0 +1,31 @@
+一个轻量级的异步队列用于在IOS上执行一系列连续的异步操作：
+比如:
+    //_asqueue is an instance of ASQueue;
+    [_asqueue addMainQueueBlock:^(id inparam){
+        id ret = nil;
+        self.label.text = @"Step 1...";
+        return ret;
+    }];
+    [_asqueue addAsyncBlock:^(id inparam){
+        id ret = @"Result";
+        sleep(5);
+        return ret;
+    }];
+    [_asqueue addMainQueueBlock:^(id inparam){
+        id ret = nil;
+        self.label.text = [NSString stringWithFormat:@"Result:%@ Step 2...",inparam];
+        return ret;
+    }];
+    [_asqueue addAsyncBlock:^(id inparam){
+        id ret = nil;
+        sleep(5);
+        return ret;
+    }];
+    [_asqueue addMainQueueBlock:^(id inparam){
+        id ret = nil;
+        self.label.text = @"End";
+        return ret;
+    }];
+    [_asqueue start:nil];
+    
+上面例子中的block都是按顺序执行的。

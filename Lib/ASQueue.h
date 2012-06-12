@@ -8,6 +8,29 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ASQueue : NSObject
+typedef id (^ASQueueBlock)(id inparam);
+
+@interface ASQueueItem : NSObject{
+    ASQueueBlock _block;
+    dispatch_queue_t _t;
+}
+
+@property (nonatomic,copy) ASQueueBlock block;
+@property (nonatomic,assign) dispatch_queue_t t;
+
+@end
+
+@interface ASQueue : NSObject{
+    NSMutableArray* _queue;
+    BOOL _running;
+}
+
+@property (nonatomic,readonly) BOOL running;
+
+- (void)addItem:(ASQueueItem*)item;
+- (void)addBlock:(ASQueueBlock)block inQueue:(dispatch_queue_t)queue;
+- (void)addMainQueueBlock:(ASQueueBlock)block;
+- (void)addAsyncBlock:(ASQueueBlock)block;
+- (void)start:(id)inparam;
 
 @end

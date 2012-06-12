@@ -21,6 +21,7 @@
 		7F3A14A51585D65400D385E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F3A14831585D65300D385E3 /* Foundation.framework */; };
 		7F3A14AD1585D65400D385E3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F3A14AB1585D65400D385E3 /* InfoPlist.strings */; };
 		7F3A14B01585D65400D385E3 /* ASequenceQueueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3A14AF1585D65400D385E3 /* ASequenceQueueTests.m */; };
+		7F3A14BC1585D6A500D385E3 /* ASQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3A14BB1585D6A500D385E3 /* ASQueue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,22 +39,24 @@
 		7F3A14811585D65300D385E3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7F3A14831585D65300D385E3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7F3A14851585D65300D385E3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		7F3A14891585D65300D385E3 /* ASequenceQueue-Info.plist */ = {isa = PBXFileReference; path = "ASequenceQueue-Info.plist"; sourceTree = "<group>"; };
+		7F3A14891585D65300D385E3 /* ASequenceQueue-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ASequenceQueue-Info.plist"; sourceTree = "<group>"; };
 		7F3A148B1585D65300D385E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7F3A148D1585D65300D385E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7F3A148F1585D65300D385E3 /* ASequenceQueue-Prefix.pch */ = {isa = PBXFileReference; path = "ASequenceQueue-Prefix.pch"; sourceTree = "<group>"; };
-		7F3A14901585D65300D385E3 /* ASQAppDelegate.h */ = {isa = PBXFileReference; path = ASQAppDelegate.h; sourceTree = "<group>"; };
+		7F3A148F1585D65300D385E3 /* ASequenceQueue-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ASequenceQueue-Prefix.pch"; sourceTree = "<group>"; };
+		7F3A14901585D65300D385E3 /* ASQAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASQAppDelegate.h; sourceTree = "<group>"; };
 		7F3A14911585D65300D385E3 /* ASQAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASQAppDelegate.m; sourceTree = "<group>"; };
-		7F3A14931585D65300D385E3 /* ASQViewController.h */ = {isa = PBXFileReference; path = ASQViewController.h; sourceTree = "<group>"; };
+		7F3A14931585D65300D385E3 /* ASQViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASQViewController.h; sourceTree = "<group>"; };
 		7F3A14941585D65300D385E3 /* ASQViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASQViewController.m; sourceTree = "<group>"; };
 		7F3A14971585D65300D385E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ASQViewController_iPhone.xib; sourceTree = "<group>"; };
 		7F3A149A1585D65300D385E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ASQViewController_iPad.xib; sourceTree = "<group>"; };
 		7F3A14A11585D65400D385E3 /* ASequenceQueueTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ASequenceQueueTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F3A14A21585D65400D385E3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		7F3A14AA1585D65400D385E3 /* ASequenceQueueTests-Info.plist */ = {isa = PBXFileReference; path = "ASequenceQueueTests-Info.plist"; sourceTree = "<group>"; };
+		7F3A14AA1585D65400D385E3 /* ASequenceQueueTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ASequenceQueueTests-Info.plist"; sourceTree = "<group>"; };
 		7F3A14AC1585D65400D385E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7F3A14AE1585D65400D385E3 /* ASequenceQueueTests.h */ = {isa = PBXFileReference; path = ASequenceQueueTests.h; sourceTree = "<group>"; };
+		7F3A14AE1585D65400D385E3 /* ASequenceQueueTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASequenceQueueTests.h; sourceTree = "<group>"; };
 		7F3A14AF1585D65400D385E3 /* ASequenceQueueTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASequenceQueueTests.m; sourceTree = "<group>"; };
+		7F3A14BA1585D6A500D385E3 /* ASQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASQueue.h; path = Lib/ASQueue.h; sourceTree = "<group>"; };
+		7F3A14BB1585D6A500D385E3 /* ASQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASQueue.m; path = Lib/ASQueue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 		7F3A14721585D65300D385E3 = {
 			isa = PBXGroup;
 			children = (
+				7F3A14B91585D66E00D385E3 /* Lib */,
 				7F3A14871585D65300D385E3 /* ASequenceQueue */,
 				7F3A14A81585D65400D385E3 /* ASequenceQueueTests */,
 				7F3A14801585D65300D385E3 /* Frameworks */,
@@ -152,6 +156,15 @@
 				7F3A14AB1585D65400D385E3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7F3A14B91585D66E00D385E3 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				7F3A14BA1585D6A500D385E3 /* ASQueue.h */,
+				7F3A14BB1585D6A500D385E3 /* ASQueue.m */,
+			);
+			name = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +279,7 @@
 				7F3A148E1585D65300D385E3 /* main.m in Sources */,
 				7F3A14921585D65300D385E3 /* ASQAppDelegate.m in Sources */,
 				7F3A14951585D65300D385E3 /* ASQViewController.m in Sources */,
+				7F3A14BC1585D6A500D385E3 /* ASQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
