@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef id (^ASQueueBlock)(id inparam);
+typedef void(^ASQueueBlock)(id inparam);
 
 @interface ASQueueItem : NSObject{
     ASQueueBlock _block;
@@ -32,5 +32,7 @@ typedef id (^ASQueueBlock)(id inparam);
 - (void)addMainQueueBlock:(ASQueueBlock)block;
 - (void)addAsyncBlock:(ASQueueBlock)block;
 - (void)start:(id)inparam;
+- (void)done:(id)param;
+- (void)doneAll;
 
 @end

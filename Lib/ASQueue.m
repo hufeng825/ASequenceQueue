@@ -72,18 +72,27 @@
     [self _scheduleNext:inparam];
 }
 
-- (void)_scheduleNext:(id)inparam{
+- (void)done:(id)param{
+    [_queue removeObjectAtIndex:0];
     if ([_queue count] <= 0) {
         _running = NO;
         return;
     }
+    [self _scheduleNext:param];
+}
+
+- (void)doneAll{
+    _running = NO;
+    [_queue removeAllObjects];
+}
+
+- (void)_scheduleNext:(id)inparam{
+    if ([_queue count] <= 0) {
+        return;
+    }
     ASQueueItem* item = [_queue objectAtIndex:0];
     dispatch_async(item.t, ^{
-        id ret = item.block(inparam);
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [_queue removeObjectAtIndex:0];
-            [self _scheduleNext:ret];
-        });
+        item.block(inparam);        
     });
 }
 

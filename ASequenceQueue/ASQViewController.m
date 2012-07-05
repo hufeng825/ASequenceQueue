@@ -22,29 +22,24 @@
         return;
     }
     [_asqueue addMainQueueBlock:^(id inparam){
-        id ret = nil;
         self.label.text = @"Step 1...";
-        return ret;
+        [_asqueue done:nil];
     }];
     [_asqueue addAsyncBlock:^(id inparam){
-        id ret = @"Result";
         sleep(5);
-        return ret;
+        [_asqueue done:@"Result1"];
     }];
     [_asqueue addMainQueueBlock:^(id inparam){
-        id ret = nil;
         self.label.text = [NSString stringWithFormat:@"Result:%@ Step 2...",inparam];
-        return ret;
+        [_asqueue done:nil];
     }];
     [_asqueue addAsyncBlock:^(id inparam){
-        id ret = nil;
         sleep(5);
-        return ret;
+        [_asqueue done:nil];
     }];
     [_asqueue addMainQueueBlock:^(id inparam){
-        id ret = nil;
         self.label.text = @"End";
-        return ret;
+        [_asqueue done:nil];
     }];
     [_asqueue start:nil];
 }
